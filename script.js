@@ -56,7 +56,7 @@ $(function() {
 
   // 対象物
   var $object = $('.box');
-  // 要素の検証用
+
   var $marginTop = $('.marginTop');
   var $marginRight = $('.marginRight');
   var $marginBottom = $('.marginBottom');
@@ -71,6 +71,8 @@ $(function() {
   var $paddingRight = $('.paddingRight');
   var $paddingBottom = $('.paddingBottom');
   var $paddingLeft = $('.paddingLeft');
+
+  var $widthHeight = $('.widthHeight')
 
   $object.hover(
     function(){
@@ -95,32 +97,32 @@ $(function() {
 
       // -------------------- margin --------------------
       $marginTop.css({
-        height: addPx(marginSize[0]),
         width: addPx(widthLength + addRightAndLeft(paddingSize) + addRightAndLeft(borderSize) + addRightAndLeft(marginSize)),
-        left: addPx(positionLeft - marginSize[3]),
+        height: addPx(marginSize[0]),
         top: addPx(positionTop - marginSize[0]),
+        left: addPx(positionLeft - marginSize[3]),
       });
 
       $marginRight.css({
-        height: addPx(heightLength + addTopAndBottom(paddingSize) + addTopAndBottom(borderSize)),
         width: addPx(marginSize[1]),
-        left: addPx(positionLeft + widthLength + addRightAndLeft(paddingSize) + addRightAndLeft(borderSize)),
+        height: addPx(heightLength + addTopAndBottom(paddingSize) + addTopAndBottom(borderSize)),
         top: addPx(positionTop),
+        left: addPx(positionLeft + widthLength + addRightAndLeft(paddingSize) + addRightAndLeft(borderSize)),
       });
 
       $marginBottom.css({
-        height: addPx(marginSize[2]),
         width: addPx(widthLength + addRightAndLeft(paddingSize) + addRightAndLeft(borderSize) + addRightAndLeft(marginSize)),
-        left: addPx(positionLeft - marginSize[3]),
+        height: addPx(marginSize[2]),
         top: addPx(positionTop + heightLength + addTopAndBottom(paddingSize) + addTopAndBottom(borderSize)),
-      })
+        left: addPx(positionLeft - marginSize[3]),
+      });
 
       $marginLeft.css({
-        height: addPx(heightLength + addTopAndBottom(paddingSize) + addTopAndBottom(borderSize)),
         width: addPx(marginSize[3]),
-        left: addPx(positionLeft - marginSize[3]),
+        height: addPx(heightLength + addTopAndBottom(paddingSize) + addTopAndBottom(borderSize)),
         top: addPx(positionTop),
-      })
+        left: addPx(positionLeft - marginSize[3]),
+      });
 
       $marginTop.show();
       $marginRight.show();
@@ -129,37 +131,54 @@ $(function() {
 
       // -------------------- border --------------------
       $borderTop.css({
-        height: addPx(borderSize[0]),
         width: addPx(widthLength + addRightAndLeft(paddingSize) + addRightAndLeft(borderSize)),
-        left: addPx(positionLeft),
+        height: addPx(borderSize[0]),
         top: addPx(positionTop),
+        left: addPx(positionLeft),
       });
 
       $borderRight.css({
-        height: addPx(heightLength + addTopAndBottom(paddingSize)),
         width: addPx(borderSize[1]),
-        left: addPx(positionLeft + widthLength + addRightAndLeft(paddingSize) + borderSize[3]),
+        height: addPx(heightLength + addTopAndBottom(paddingSize)),
         top: addPx(positionTop + borderSize[0]),
+        left: addPx(positionLeft + widthLength + addRightAndLeft(paddingSize) + borderSize[3]),
       });
 
       $borderBottom.css({
-        height: addPx(borderSize[2]),
         width: addPx(widthLength + addRightAndLeft(paddingSize) + addRightAndLeft(borderSize)),
-        left: addPx(positionLeft),
+        height: addPx(borderSize[2]),
         top: addPx(positionTop + heightLength + addTopAndBottom(paddingSize) + borderSize[0]),
-      })
+        left: addPx(positionLeft),
+      });
 
       $borderLeft.css({
-        height: addPx(heightLength + addTopAndBottom(paddingSize)),
         width: addPx(borderSize[3]),
-        left: addPx(positionLeft),
+        height: addPx(heightLength + addTopAndBottom(paddingSize)),
         top: addPx(positionTop + borderSize[0]),
-      })
+        left: addPx(positionLeft),
+      });
 
       $borderTop.show();
       $borderRight.show();
       $borderLeft.show();
       $borderBottom.show();
+
+      // -------------------- padding --------------------
+
+      $paddingTop.show();
+      $paddingRight.show();
+      $paddingLeft.show();
+      $paddingBottom.show();
+
+      // -------------------- width & height --------------------
+      $widthHeight.css({
+        width: addPx(widthLength),
+        height: addPx(heightLength),
+        top: addPx(positionTop + borderSize[0] + paddingSize[0]),
+        left: addPx(positionLeft + borderSize[3] + paddingSize[3]),
+      });
+
+      $widthHeight.show();
 
     },
     function(){
@@ -172,6 +191,13 @@ $(function() {
       $borderRight.hide();
       $borderLeft.hide();
       $borderBottom.hide();
+
+      $paddingTop.hide();
+      $paddingRight.hide();
+      $paddingLeft.hide();
+      $paddingBottom.hide();
+
+      $widthHeight.hide();
     }
   );
 });

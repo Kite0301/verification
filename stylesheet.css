@@ -43,9 +43,19 @@ wh: #8BB5C0, rgb(139,181,192)
 }
 
 .margin div {
-  background-color: rgba(249, 204, 157, 0.8);
+  background-color: rgba(249, 204, 157, 0.75);
 }
 
 .border div {
-  background-color: rgba(253, 221, 155, 0.8);
+  background-color: rgba(253, 221, 155, 0.75);
+}
+
+.padding div {
+  background-color: rgba(194, 207, 138, 0.75);
+}
+
+.widthHeight {
+  display: none;
+  position: absolute;
+  background-color: rgba(139, 181, 192, 0.75);
 }
