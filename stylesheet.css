@@ -1,0 +1,51 @@
+/* MEMO
+
+mg: #F9CC9D, rgb(249,204,157)
+bd: #FDDD9B, rgb(253,221,155)
+pd: #C2CF8A, rgb(194,207,138)
+wh: #8BB5C0, rgb(139,181,192)
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  margin: 30px 50px 20px 10px;
+  /*margin-top: 0;*/
+  border: 3px solid #333;
+  border-bottom: 5px solid #555;
+  padding: 20px;
+  background-color: #aaa;
+  display: inline-block;
+}
+
+.title {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+/* ----------------- 要素の検証系 ------------------ */
+
+#main {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#verification div div {
+  display: none;
+  position: absolute;
+}
+
+.margin div {
+  background-color: rgba(249, 204, 157, 0.8);
+}
+
+.border div {
+  background-color: rgba(253, 221, 155, 0.8);
+}
