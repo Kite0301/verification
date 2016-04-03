@@ -72,10 +72,31 @@ $(function() {
   var $paddingBottom = $('.paddingBottom');
   var $paddingLeft = $('.paddingLeft');
 
-  var $widthHeight = $('.widthHeight')
+  var $widthHeight = $('.widthHeight');
+
+  var verificationFlag = false;
+  $('#verification-btn').click(function(){
+    verificationFlag = !verificationFlag;
+    if (verificationFlag) {
+      $(this).css({
+        border: '1px solid #4280EC',
+        color:' #4280EC',
+      })
+    } else {
+      $(this).css({
+        border: '1px solid #5A5A5A',
+        color:' #5A5A5A',
+      })
+    }
+  })
 
   $object.hover(
     function(){
+
+      if (!verificationFlag) {
+        return false;
+      }
+
       var $obj = $(this)
       // CSSを取得
       const margin = $obj.css('margin')
