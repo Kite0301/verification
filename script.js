@@ -164,6 +164,33 @@ $(function() {
       $borderBottom.show();
 
       // -------------------- padding --------------------
+      $paddingTop.css({
+        width: addPx(widthLength + addRightAndLeft(paddingSize)),
+        height:addPx(paddingSize[0]),
+        top: addPx(positionTop + borderSize[0]),
+        left: addPx(positionLeft + borderSize[3]),
+      });
+
+      $paddingRight.css({
+        width: addPx(paddingSize[1]),
+        height: addPx(heightLength),
+        top: addPx(positionTop + borderSize[0] + paddingSize[0]),
+        left: addPx(positionLeft + borderSize[3] + paddingSize[3] + widthLength),
+      });
+
+      $paddingBottom.css({
+        width: addPx(widthLength + addRightAndLeft(paddingSize)),
+        height:addPx(paddingSize[2]),
+        top: addPx(positionTop + borderSize[0] + paddingSize[0] + heightLength),
+        left: addPx(positionLeft + borderSize[3]),
+      });
+
+      $paddingLeft.css({
+        width: addPx(paddingSize[3]),
+        height: addPx(heightLength),
+        top: addPx(positionTop + borderSize[0] + paddingSize[0]),
+        left: addPx(positionLeft + borderSize[3]),
+      });
 
       $paddingTop.show();
       $paddingRight.show();

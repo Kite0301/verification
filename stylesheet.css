@@ -18,7 +18,7 @@ wh: #8BB5C0, rgb(139,181,192)
   border: 3px solid #333;
   border-bottom: 5px solid #555;
   padding: 20px;
-  background-color: #aaa;
+  /*background-color: #aaa;*/
   display: inline-block;
 }
 
@@ -43,19 +43,27 @@ wh: #8BB5C0, rgb(139,181,192)
 }
 
 .margin div {
-  background-color: rgba(249, 204, 157, 0.75);
+  background-color: rgba(241, 182, 122, 0.7);
 }
 
 .border div {
-  background-color: rgba(253, 221, 155, 0.75);
+  background-color: rgba(253, 221, 155, 0.7);
 }
 
 .padding div {
-  background-color: rgba(194, 207, 138, 0.75);
+  background-color: rgba(194, 207, 138, 0.7);
 }
 
 .widthHeight {
   display: none;
   position: absolute;
-  background-color: rgba(139, 181, 192, 0.75);
+  background-color: rgba(139, 181, 192, 0.7);
+}
+
+/* -------------------- サイト ---------------------*/
+
+header {
+  width: 100%;
+  display: inline-block;
+  background-color: rgb(143, 180, 242);
 }
